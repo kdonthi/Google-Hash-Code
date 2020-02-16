@@ -52,14 +52,40 @@ int main()
 	long pizzatypes;
 	long maxslices;
 
-	pizzatypes = 5; //we need the amount, if it is not an array of chars XD
-	maxslices = 17;
+	FILE *fileobject = fopen("a_example.in", "r");
+	fscanf(fileobject, "%lu", &maxslices);
+	fscanf(fileobject, "%lu", &pizzatypes);
+
+	//pizzatypes = 10; //we need the amount, if it is not an array of chars XD
 	long *pizzaslices = malloc(sizeof(long) * pizzatypes);
-	pizzaslices[0] = 2;
-	pizzaslices[1] = 2;
-	pizzaslices[2] = 3;
-	pizzaslices[3] = 6;
-	pizzaslices[4] = 10;
+	long j;
+	long holdpizzaslices;
+
+	j = 0;
+	holdpizzaslices = 0;
+	while (j < pizzatypes)
+	{
+		fscanf(fileobject, "%lu", &holdpizzaslices);
+		pizzaslices[j] = holdpizzaslices;
+		j++;
+	}
+
+	j = 0;
+	while (j < pizzatypes)
+	{
+		printf("%lu", pizzaslices[j]);
+		j++;
+	}
+	/*pizzaslices[0] = 4;
+	pizzaslices[1] = 14;
+	pizzaslices[2] = 15;
+	pizzaslices[3] = 18;
+	pizzaslices[4] = 29;
+	pizzaslices[5] = 32;
+	pizzaslices[6] = 36;
+	pizzaslices[7] = 82;
+	pizzaslices[8] = 95;
+	pizzaslices[9] = 95;*/
 	long maximumpizzas;
 	long i;
 	long slices;
@@ -101,8 +127,8 @@ int main()
 		i++;
 	}
 	i = 0;
-	int max = 0;
-	int maxindex = -1;
+	long max = 0;
+	long maxindex = -1;
 	while (i < maximumpizzas)
 	{
 		if (answers[i][0] > max)
@@ -113,12 +139,12 @@ int main()
 		i++;
 	}
 	i = 1;
-	printf("Max number of slices: %i\n", max);
-	printf("Max index: %i\n", maxindex);
-	printf("Indices: ");
+	FILE *towrite = fopen("writeto.txt", "w");
+	fprintf(towrite, "%lu", max);
+	fprintf(towrite, "\n");
 	while (i <= maxindex + 1)
 	{
-		printf("%li ",answers[maxindex][i]);
+		fprintf(towrite,"%lu ", answers[maxindex][i]);
 		i++;
 	}
 	printf("\n");

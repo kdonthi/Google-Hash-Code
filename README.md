@@ -6,3 +6,5 @@ gcc -o hashcode hashcode.c
 and run it using a .txt file with the specified input.
 
 ./hashcode ___TXTFILE___
+
+If you just want to look, go to hashcode.c. Any suggestions for improvement are welcomed!

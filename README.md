@@ -3,4 +3,6 @@ Hi, my name is Kaushik Donthi and this is my take on Google's Hash Code problem 
 
 gcc -o hashcode hashcode.c
 
-and run it using a file with the specified input.
+and run it using a .txt file with the specified input.
+
+./hashcode ___TXTFILE____

@@ -7,4 +7,4 @@ and run it using a .txt file with the specified input.
 
 ./hashcode ___TXTFILE___
 
-If you just want to look at the code, go to hashcode.c. If you want to look at the problem statement, go to problemstatement.c - pretty self explanatory :) Any suggestions for improvement are welcomed.
+If you just want to look at the code, go to hashcode.c. If you want to look at the problem statement, go to problemstatement.c - pretty self explanatory. Any suggestions for improvement are welcomed.

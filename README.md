@@ -5,4 +5,4 @@ gcc -o hashcode hashcode.c
 
 and run it using a .txt file with the specified input.
 
-./hashcode ___TXTFILE
+./hashcode ___TXTFILE___

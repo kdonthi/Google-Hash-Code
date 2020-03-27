@@ -9,4 +9,4 @@ and run it using a .in file with the input in the format specified by the proble
 
 I have given two .in files for testing.
 
-If you just want to look at the code, go to hashcode.c. If you want to look at the problem statement, go to problemstatement.c. Any suggestions for improvement are welcomed.
+If you just want to look at the code, go to hashcode.c. If you want to look at the problem statement, go to problemstatement.pdf. Any suggestions for improvement are welcomed.
